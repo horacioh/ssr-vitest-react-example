@@ -9,8 +9,7 @@ describe("Simple working test", () => {
     await render(<App />, {
       wrapper: ({ children }) => <MemoryRouter>{children}</MemoryRouter>,
     })
-    screen.debug()
-    expect(screen.getByText(/Home/i)).toBeTruthy()
-    // expect(screen.getByText(/home/i)).toBeInTheDocument()
+    // expect(screen.getByTestId("home")).toBeTruthy()
+    expect(screen.getByTestId("home")).toBeInTheDocument()
   })
 })
